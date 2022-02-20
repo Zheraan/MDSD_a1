@@ -1,7 +1,5 @@
 package main;
 
-import java.io.Console;
-import java.util.ArrayList;
 import java.util.List;
 
 import main.metamodel.Machine;
