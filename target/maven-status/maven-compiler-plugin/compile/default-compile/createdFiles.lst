@@ -1,0 +1,6 @@
+main\MachineInterpreter.class
+main\metamodel\State.class
+main\metamodel\Transition.class
+main\metamodel\Variable.class
+main\StateMachine.class
+main\metamodel\Machine.class

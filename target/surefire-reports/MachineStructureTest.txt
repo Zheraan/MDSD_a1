@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: MachineStructureTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.065 s <<< FAILURE! - in MachineStructureTest
+MachineStructureTest.transitionSetVariable  Time elapsed: 0.039 s  <<< ERROR!
+java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at MachineStructureTest.transitionSetVariable(MachineStructureTest.java:106)
+
