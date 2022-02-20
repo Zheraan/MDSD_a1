@@ -68,4 +68,13 @@ public class Machine {
 		return false;
 	}
 
+	public void processOperation(Transition t) {
+		if (t.hasDecrementOperation()) {
+			this.getVariableByName(t.getOperationVariableName()).decrement();
+		} else if (t.hasIncrementOperation()) {
+			this.getVariableByName(t.getOperationVariableName()).increment();
+		} else if (t.hasSetOperation()) {
+			this.getVariableByName(t.getOperationVariableName()).setValue(t.getOperationValue());
+		}
+	}
 }

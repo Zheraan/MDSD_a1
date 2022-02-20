@@ -6,10 +6,11 @@ import java.util.List;
 public class State {
 
 	private String name;
-	private List<Transition> transitions = new ArrayList<>();
+	private List<Transition> transitions;
 
 	public State(String s) {
 		this.name = s;
+		this.transitions = new ArrayList<>();
 	}
 
 	public String getName() {
@@ -31,6 +32,16 @@ public class State {
 				return t.get(i);
 		}
 		return null;
+	}
+
+	public List<Transition> getTransitionsListByEvent(String string) {
+		List<Transition> t = this.getTransitions();
+		List<Transition> list = new ArrayList<>();
+		for (int i = 0; i < t.size(); i++) {
+			if (t.get(i).getEvent().equals(string))
+				list.add(t.get(i));
+		}
+		return list;
 	}
 
 }

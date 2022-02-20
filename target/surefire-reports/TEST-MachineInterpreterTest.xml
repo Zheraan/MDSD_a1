@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="MachineInterpreterTest" time="0.049" tests="19" errors="0" skipped="0" failures="14">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="MachineInterpreterTest" time="0.045" tests="19" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\Formosa Renaud\AppData\Local\Temp\surefire3596141104778156450\surefirebooter2344004051995573365.jar C:\Users\Formosa Renaud\AppData\Local\Temp\surefire3596141104778156450 2022-02-20T00-16-23_111-jvmRun1 surefire12613724805707595846tmp surefire_015713469600460047014tmp"/>
+    <property name="sun.java.command" value="C:\Users\Formosa Renaud\AppData\Local\Temp\surefire14388554271898867471\surefirebooter15277189282418936030.jar C:\Users\Formosa Renaud\AppData\Local\Temp\surefire14388554271898867471 2022-02-20T15-41-25_662-jvmRun1 surefire9460525524136327931tmp surefire_017507843659523241593tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Documents\Cours Master\M1S2\MDSD\ASS1\demo\target\test-classes;D:\Documents\Cours Master\M1S2\MDSD\ASS1\demo\target\classes;C:\Users\Formosa Renaud\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Formosa Renaud\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Formosa Renaud\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\Formosa Renaud\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;C:\Users\Formosa Renaud\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Formosa Renaud\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\Formosa Renaud\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\Formosa Renaud\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Formosa Renaud\AppData\Local\Temp\surefire3596141104778156450\surefirebooter2344004051995573365.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Formosa Renaud\AppData\Local\Temp\surefire14388554271898867471\surefirebooter15277189282418936030.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17+35-LTS-2724"/>
@@ -56,117 +56,38 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="transitionIfVariableEqual" classname="MachineInterpreterTest" time="0.002">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <state 3> but was: <state 1>
-	at MachineInterpreterTest.transitionIfVariableEqual(MachineInterpreterTest.java:104)
-]]></failure>
-    <system-err><![CDATA[Error: event GO not associated to a transition
-Error: event GO not associated to a transition
+  <testcase name="transitionIfVariableEqual" classname="MachineInterpreterTest" time="0.001"/>
+  <testcase name="transitionOrder" classname="MachineInterpreterTest" time="0.001"/>
+  <testcase name="transitionIfVariableEqualsAndSet" classname="MachineInterpreterTest" time="0.006"/>
+  <testcase name="transitionSetVariable" classname="MachineInterpreterTest" time="0.001"/>
+  <testcase name="transitionIfVariableNotLessThan" classname="MachineInterpreterTest" time="0.001">
+    <system-err><![CDATA[Warning: event GO conditions not filled for transition
+Required var var to have value 42
 ]]></system-err>
   </testcase>
-  <testcase name="transitionOrder" classname="MachineInterpreterTest" time="0.002"/>
-  <testcase name="transitionIfVariableEqualsAndSet" classname="MachineInterpreterTest" time="0.001">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <42> but was: <0>
-	at MachineInterpreterTest.transitionIfVariableEqualsAndSet(MachineInterpreterTest.java:163)
-]]></failure>
-    <system-err><![CDATA[Error: event GO not associated to a transition
-]]></system-err>
-  </testcase>
-  <testcase name="transitionSetVariable" classname="MachineInterpreterTest" time="0.001">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <42> but was: <0>
-	at MachineInterpreterTest.transitionSetVariable(MachineInterpreterTest.java:76)
-]]></failure>
-    <system-err><![CDATA[Error: event SET not associated to a transition
-]]></system-err>
-  </testcase>
-  <testcase name="transitionIfVariableNotLessThan" classname="MachineInterpreterTest" time="0.002">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <state 2> but was: <state 1>
-	at MachineInterpreterTest.transitionIfVariableNotLessThan(MachineInterpreterTest.java:154)
-]]></failure>
-    <system-err><![CDATA[Error: event GO not associated to a transition
-Error: event GO not associated to a transition
-]]></system-err>
-  </testcase>
-  <testcase name="transitionDecrementVariable" classname="MachineInterpreterTest" time="0.001">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <-1> but was: <0>
-	at MachineInterpreterTest.transitionDecrementVariable(MachineInterpreterTest.java:94)
-]]></failure>
-    <system-err><![CDATA[Error: event SET not associated to a transition
-]]></system-err>
-  </testcase>
-  <testcase name="startInitState" classname="MachineInterpreterTest" time="0.001"/>
-  <testcase name="listOfEvents" classname="MachineInterpreterTest" time="0.001">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <state 3> but was: <state 1>
-	at MachineInterpreterTest.listOfEvents(MachineInterpreterTest.java:51)
-]]></failure>
-    <system-err><![CDATA[Error: event ON not associated to a transition
-Error: event GO not associated to a transition
-]]></system-err>
-  </testcase>
-  <testcase name="transitionIfVariableGreaterAndIncrement" classname="MachineInterpreterTest" time="0.001">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
-	at MachineInterpreterTest.transitionIfVariableGreaterAndIncrement(MachineInterpreterTest.java:172)
-]]></failure>
-    <system-err><![CDATA[Error: event GO not associated to a transition
-]]></system-err>
-  </testcase>
-  <testcase name="transitionIfVariableNotEqual" classname="MachineInterpreterTest" time="0.001">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <state 2> but was: <state 1>
-	at MachineInterpreterTest.transitionIfVariableNotEqual(MachineInterpreterTest.java:114)
-]]></failure>
-    <system-err><![CDATA[Error: event GO not associated to a transition
-Error: event GO not associated to a transition
+  <testcase name="transitionDecrementVariable" classname="MachineInterpreterTest" time="0.002"/>
+  <testcase name="startInitState" classname="MachineInterpreterTest" time="0"/>
+  <testcase name="listOfEvents" classname="MachineInterpreterTest" time="0.001"/>
+  <testcase name="transitionIfVariableGreaterAndIncrement" classname="MachineInterpreterTest" time="0.002"/>
+  <testcase name="transitionIfVariableNotEqual" classname="MachineInterpreterTest" time="0">
+    <system-err><![CDATA[Warning: event GO conditions not filled for transition
+Required var var to have value 40
 ]]></system-err>
   </testcase>
   <testcase name="transitionIfVariableNotGreaterThan" classname="MachineInterpreterTest" time="0.001">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <state 2> but was: <state 1>
-	at MachineInterpreterTest.transitionIfVariableNotGreaterThan(MachineInterpreterTest.java:134)
-]]></failure>
-    <system-err><![CDATA[Error: event GO not associated to a transition
-Error: event GO not associated to a transition
+    <system-err><![CDATA[Warning: event GO conditions not filled for transition
+Required var var to have value 42
 ]]></system-err>
   </testcase>
-  <testcase name="transitionIfVariableLessAndDecrement" classname="MachineInterpreterTest" time="0.001">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <-1> but was: <0>
-	at MachineInterpreterTest.transitionIfVariableLessAndDecrement(MachineInterpreterTest.java:181)
-]]></failure>
-    <system-err><![CDATA[Error: event GO not associated to a transition
-]]></system-err>
-  </testcase>
-  <testcase name="transitionIfVariableLessThan" classname="MachineInterpreterTest" time="0.002">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <state 3> but was: <state 1>
-	at MachineInterpreterTest.transitionIfVariableLessThan(MachineInterpreterTest.java:144)
-]]></failure>
-    <system-err><![CDATA[Error: event GO not associated to a transition
-Error: event GO not associated to a transition
-]]></system-err>
-  </testcase>
-  <testcase name="initVariable" classname="MachineInterpreterTest" time="0"/>
-  <testcase name="transitionIncrementVariable" classname="MachineInterpreterTest" time="0.001">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
-	at MachineInterpreterTest.transitionIncrementVariable(MachineInterpreterTest.java:85)
-]]></failure>
-    <system-err><![CDATA[Error: event SET not associated to a transition
-]]></system-err>
-  </testcase>
-  <testcase name="transitionIfVariableGreaterThan" classname="MachineInterpreterTest" time="0.001">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <state 3> but was: <state 1>
-	at MachineInterpreterTest.transitionIfVariableGreaterThan(MachineInterpreterTest.java:124)
-]]></failure>
-    <system-err><![CDATA[Error: event GO not associated to a transition
-Error: event GO not associated to a transition
-]]></system-err>
-  </testcase>
+  <testcase name="transitionIfVariableLessAndDecrement" classname="MachineInterpreterTest" time="0.001"/>
+  <testcase name="transitionIfVariableLessThan" classname="MachineInterpreterTest" time="0.001"/>
+  <testcase name="initVariable" classname="MachineInterpreterTest" time="0.001"/>
+  <testcase name="transitionIncrementVariable" classname="MachineInterpreterTest" time="0.001"/>
+  <testcase name="transitionIfVariableGreaterThan" classname="MachineInterpreterTest" time="0.001"/>
   <testcase name="eventNoTransition" classname="MachineInterpreterTest" time="0.001">
     <system-err><![CDATA[Error: event to 2 not associated to a transition
 ]]></system-err>
   </testcase>
   <testcase name="chooseTransition" classname="MachineInterpreterTest" time="0.001"/>
-  <testcase name="eventTransition" classname="MachineInterpreterTest" time="0.001">
-    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <state 2> but was: <state 1>
-	at MachineInterpreterTest.eventTransition(MachineInterpreterTest.java:41)
-]]></failure>
-    <system-err><![CDATA[Error: event FIRE not associated to a transition
-]]></system-err>
-  </testcase>
+  <testcase name="eventTransition" classname="MachineInterpreterTest" time="0.001"/>
 </testsuite>

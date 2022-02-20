@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: CDPlayerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.071 s <<< FAILURE! - in CDPlayerTest
-CDPlayerTest.playMusic  Time elapsed: 0.038 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
-	at CDPlayerTest.playMusic(CDPlayerTest.java:38)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 s - in CDPlayerTest

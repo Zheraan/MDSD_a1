@@ -15,15 +15,25 @@ public class CDPlayerTest {
 	@BeforeEach
 	public void init() {
 		StateMachine stateMachine = new StateMachine();
-		final int NUMBER_TRACKS = 10;
-		Machine m = stateMachine.integer("track").state("STOP").initial().when("PLAY").to("PLAYING").set("track", 1)
-				.ifEquals("track", 0).when("PLAY").to("PLAYING").state("PLAYING").when("STOP").to("STOP").when("PAUSE")
-				.to("PAUSED").when("TRACK_END").to("STOP").ifEquals("track", NUMBER_TRACKS).when("TRACK_END").to("PLAYING")
-				.increment("track").state("PAUSED").when("STOP").to("STOP").when("PLAY").to("PLAYING").when("FORWARD")
-				.to("PAUSED").increment("track").ifLessThan("track", NUMBER_TRACKS + 1).when("BACK").to("PAUSED")
-				.decrement("track").ifGreaterThan("track", 1).
+		final int NUMBER_TRACKS= 10;
+		Machine m = stateMachine.
+					integer("track").
+					state("STOP").initial().
+						when("PLAY").to("PLAYING").set("track", 1).ifEquals("track", 0).
+						when("PLAY").to("PLAYING").
+					state("PLAYING").
+						when("STOP").to("STOP").
+						when("PAUSE").to("PAUSED").
+						when("TRACK_END").to("STOP").ifEquals("track", NUMBER_TRACKS).
+						when("TRACK_END").to("PLAYING").increment("track").
+					state("PAUSED").
+						when("STOP").to("STOP").
+						when("PLAY").to("PLAYING").
+						when("FORWARD").to("PAUSED").increment("track").ifLessThan("track", NUMBER_TRACKS + 1).
+						when("BACK").to("PAUSED").decrement("track").ifGreaterThan("track", 1).
 
-				build();
+
+					build();
 		interpreter = new MachineInterpreter();
 		interpreter.run(m);
 	}
@@ -76,6 +86,7 @@ public class CDPlayerTest {
 		interpreter.processEvent("TRACK_END");
 		assertEquals(10, interpreter.getInteger("track"));
 		assertEquals("STOP", interpreter.getCurrentState().getName());
+
 
 	}
 }

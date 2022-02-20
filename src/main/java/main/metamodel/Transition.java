@@ -118,4 +118,21 @@ public class Transition {
 	public int getOperationValue() {
 		return this.opVal;
 	}
+
+	public boolean isConditionFilled(Machine m) {
+		if (this.isConditionEqual()
+				&& (this.getConditionComparedValue() == m.getVariableByName(this.getConditionVariableName()).getValue())) {
+			return true;
+		}
+		if (this.isConditionGreaterThan()
+				&& (this.getConditionComparedValue() < m.getVariableByName(this.getConditionVariableName()).getValue())) {
+			return true;
+		}
+		if (this.isConditionLessThan()
+				&& (this.getConditionComparedValue() > m.getVariableByName(this.getConditionVariableName()).getValue())) {
+			return true;
+		}
+
+		return false;
+	}
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="MachineStructureTest" time="0.065" tests="1" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="MachineStructureTest" time="0.061" tests="18" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,9 +15,8 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\Formosa Renaud\AppData\Local\Temp\surefire10233693906472536150\surefirebooter669580566945375950.jar C:\Users\Formosa Renaud\AppData\Local\Temp\surefire10233693906472536150 2022-02-20T02-06-42_570-jvmRun1 surefire4841672694244993841tmp surefire_04239143166948740530tmp"/>
+    <property name="sun.java.command" value="C:\Users\Formosa Renaud\AppData\Local\Temp\surefire14388554271898867471\surefirebooter15277189282418936030.jar C:\Users\Formosa Renaud\AppData\Local\Temp\surefire14388554271898867471 2022-02-20T15-41-25_662-jvmRun1 surefire9460525524136327931tmp surefire_017507843659523241593tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="MachineStructureTest#transitionSetVariable"/>
     <property name="surefire.test.class.path" value="D:\Documents\Cours Master\M1S2\MDSD\ASS1\demo\target\test-classes;D:\Documents\Cours Master\M1S2\MDSD\ASS1\demo\target\classes;C:\Users\Formosa Renaud\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Formosa Renaud\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Formosa Renaud\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\Formosa Renaud\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;C:\Users\Formosa Renaud\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Formosa Renaud\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\Formosa Renaud\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\Formosa Renaud\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Formosa Renaud"/>
@@ -31,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Formosa Renaud\AppData\Local\Temp\surefire10233693906472536150\surefirebooter669580566945375950.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Formosa Renaud\AppData\Local\Temp\surefire14388554271898867471\surefirebooter15277189282418936030.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17+35-LTS-2724"/>
@@ -57,14 +56,70 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="transitionSetVariable" classname="MachineStructureTest" time="0.039">
-    <error type="java.lang.IndexOutOfBoundsException"><![CDATA[java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at MachineStructureTest.transitionSetVariable(MachineStructureTest.java:106)
-]]></error>
-    <system-out><![CDATA[Checking transition with target state 2
-Checking transition with target state 2
-Transitions of size 0
-Transitions of size state 1
+  <testcase name="transitionIfVariableEqual" classname="MachineStructureTest" time="0.002">
+    <system-out><![CDATA[Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="transitions" classname="MachineStructureTest" time="0.006">
+    <system-out><![CDATA[Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="transitionIfVariableEqualsAndSet" classname="MachineStructureTest" time="0.004">
+    <system-out><![CDATA[Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="transitionSetVariable" classname="MachineStructureTest" time="0.002">
+    <system-out><![CDATA[Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="noTransitions" classname="MachineStructureTest" time="0.002">
+    <system-out><![CDATA[Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="transitionDecrementVariable" classname="MachineStructureTest" time="0.001">
+    <system-out><![CDATA[Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="states" classname="MachineStructureTest" time="0.003">
+    <system-out><![CDATA[Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="initialState" classname="MachineStructureTest" time="0.001"/>
+  <testcase name="transitionIfVariableGreaterAndIncrement" classname="MachineStructureTest" time="0.001">
+    <system-out><![CDATA[Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="transitionIfVariableLessAndDecrement" classname="MachineStructureTest" time="0.001">
+    <system-out><![CDATA[Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="transitionIfVariableLessThan" classname="MachineStructureTest" time="0.001">
+    <system-out><![CDATA[Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="emptyMachine" classname="MachineStructureTest" time="0.001">
+    <system-out><![CDATA[Warning: this machine has no states
+Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="initialFirstState" classname="MachineStructureTest" time="0.003"/>
+  <testcase name="transitionIncrementVariable" classname="MachineStructureTest" time="0.001">
+    <system-out><![CDATA[Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="transitionIfVariableGreaterThan" classname="MachineStructureTest" time="0">
+    <system-out><![CDATA[Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="noVariables" classname="MachineStructureTest" time="0.002">
+    <system-out><![CDATA[Warning: this machine has no states
+Warning: this machine has no initial state
+]]></system-out>
+  </testcase>
+  <testcase name="getState" classname="MachineStructureTest" time="0.001"/>
+  <testcase name="addVariable" classname="MachineStructureTest" time="0.002">
+    <system-out><![CDATA[Warning: this machine has no states
+Warning: this machine has no initial state
 ]]></system-out>
   </testcase>
 </testsuite>

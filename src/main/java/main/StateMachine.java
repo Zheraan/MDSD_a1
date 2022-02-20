@@ -20,21 +20,6 @@ public class StateMachine {
 			this.m.addState(this.curState);
 		}
 
-		System.out.println(
-				"Checking transition with target " + this.curTransition.getTargetName());
-
-		System.out.println(
-				"Checking transition with target " + this.curState.getTransitions().get(0).getTargetName());
-
-		System.out.println(
-				"Transitions of size " + this.m.getState("state 1").getTransitions().size());
-
-		System.out.println(
-				"Transitions of size " + this.m.getState("state 1").getName());
-
-		System.out.println(
-				"Checking transition with target " + this.m.getState("state 1").getTransitions().get(0).getTargetName());
-
 		if (!this.m.getStates().isEmpty()) {
 			for (State s : this.m.getStates()) {
 				if (!s.getTransitions().isEmpty()) {
@@ -61,10 +46,15 @@ public class StateMachine {
 	}
 
 	public StateMachine state(String string) {
-		if (this.curState != null)
+		if (this.curState != null) {
+			if (this.curTransition != null) {
+				this.curState.addTransition(this.curTransition);
+				this.curTransition = null;
+			}
 			this.m.addState(this.curState);
-		this.curState = new State(string);
+		}
 
+		this.curState = new State(string);
 		return this;
 	}
 
@@ -76,8 +66,8 @@ public class StateMachine {
 	public StateMachine when(String string) {
 		if (this.curTransition != null)
 			this.curState.addTransition(this.curTransition);
-		this.curTransition = new Transition(string);
 
+		this.curTransition = new Transition(string);
 		return this;
 	}
 
